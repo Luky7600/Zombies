@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="acm">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/Projecte/acm" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/Projecte/acm" recursive="false" />
+  </library>
+</component>
