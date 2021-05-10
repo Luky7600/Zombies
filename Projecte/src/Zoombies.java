@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class proba {
+public class Zoombies {
     public static void main(String[] args) {
         Scanner sumaarrays = new Scanner(System.in);
         int num1,num2,num3;
