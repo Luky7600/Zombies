@@ -89,19 +89,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Zombies" />
       <option name="VM_PARAMETERS" />
@@ -165,7 +152,12 @@
       <option name="presentableId" value="Default" />
       <updated>1620668873343</updated>
       <workItem from="1620668877510" duration="301000" />
+<<<<<<< Updated upstream
       <workItem from="1620831509857" duration="361000" />
+=======
+      <workItem from="1620669794809" duration="1754000" />
+      <workItem from="1620737887177" duration="1065000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
