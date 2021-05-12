@@ -24,12 +24,14 @@ public class ZombieImatge {
 
     //Mètode constructor del camell
     public ZombieImatge() {
-        int triaColor = (int) (Math.random() * imatgesCamells.length);
+        int triaColor = (int) (Math.random() * imatgesCamells.length-1);
         this.imatge = new GImage(imatgesCamells[triaColor]);
 
         id = lastID;
         lastID++;
-
+        if (id == 6){
+            this.imatge = new GImage(imatgesCamells[8]);
+        }
         maximaVelocitat = VELOCITATDEFECTE;
     }
 
