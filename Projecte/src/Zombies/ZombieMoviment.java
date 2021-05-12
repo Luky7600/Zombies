@@ -65,7 +65,7 @@ public class ZombieMoviment {
                 * SEPARACIO);
 
         //Cridem els següents mètodes
-        pintaPista();
+        //pintaPista();
         preparatsLlestos();
         //Fem que la següent variable sigui igual al mètode
         camellMesRapid = aCorrer();
@@ -86,33 +86,14 @@ public class ZombieMoviment {
                 contador++;
                 int velocitatMaxima = candidat.getMaximaVelocitat();
                 double moviment = (int) (Math.random() * velocitatMaxima);
-                candidat.mou(moviment, 0);
-                if(candidat.getID()==1 || candidat.getID()==2 ){
-                    candidat.mou(moviment*2, 0);
-                }
-                if(candidat.getID()==3 || candidat.getID()==4 ){
-                    candidat.mou((int)(Math.random() * ((5 - 10) + 1)), 0);
-                }
-                if(candidat.getID()==5 || candidat.getID()==6 ){
-                    if(moviment%2!=0){
-                        candidat.mou(2, 0);
-                    }
-                }
-                if(candidat.getID()==8){
-                    if(contador%2==0){
-                        candidat.mou(moviment, 0);
-                    }else{
-                        candidat.mou(-2, 0);
-                    }
-                }
+                double moviment2 = (int) (Math.random() * velocitatMaxima);
+                candidat.mou(moviment, moviment2);
                 if (candidat.getPosicio() >= liniaFinal) {
                     finalCarrera = true;
                 }
 
                 if (candidat.getPosicio() > posicioPrimer) {
                     posicioPrimer = candidat.getPosicio();
-                    estrella.setLocation(liniaFinal,
-                            ((candidat.getID() * 2) - 1) * SEPARACIO / 2);
                 }
             }
         }
@@ -121,13 +102,7 @@ public class ZombieMoviment {
     }
 
     //Aquest metode es per tal de que la estrella segueixi sempre el camell que va guanyan en aquel moment
-    private void pintaPista() {
-
-        // Pinta la estrella que segueix el líder de la carrera
-        estrella = new GImage("star2.jpg");
-        estrella.setLocation(liniaFinal, POSICIOINICIAL);
-        pantalla.add(estrella);
-
+    /*private void pintaPista() {
         int posicio = POSICIOINICIAL;
         // Pinta les línies horitzontals de les pistes
         for (int i = 0; i <= camells.size(); i++) {
@@ -144,7 +119,7 @@ public class ZombieMoviment {
         liniaArribada.setColor(Color.RED);
         pantalla.add(liniaArribada);
 
-    }
+    }*/
 
     //metode per posar perparats a la llista de espera
     private void preparatsLlestos() {

@@ -16,8 +16,8 @@ public class ZombieImatge {
     private int maximaVelocitat;
 
     //Creem un array de les Imatges possibles dels camells, aquestes s'assignaran automàticament
-    private String[] imatgesCamells = {"vermell.jpg", "verd.jpg", "groc.jpg",
-            "blau.jpg", "negre.jpg", "taronja.jpg", "rosa.jpg" };
+    private String[] imatgesCamells = {"emoji1.png", "emoji2.png", "emoji3.png",
+            "emoji4.png", "emoji5.png", "emoji6.png", "emoji8.png","emoji9.png","zoombie.png" };
 
     //Imatge del camell
     private GImage imatge;

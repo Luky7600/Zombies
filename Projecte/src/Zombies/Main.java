@@ -8,7 +8,7 @@ public class Main extends GraphicsProgram {
     /**
      * @param num Fem una variable num que sera el numero total de camells imrpimits per pantalla
      */
-    static final int num = 8;
+    static final int num = 10;
 
     //Definim la meta
     static final double meta = 900;
