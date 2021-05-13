@@ -52,7 +52,7 @@ public class ZombieImatge {
 
     //Definirà la posiciódel camell, posició "X" i posició "Y"
     public final void setPosicio(final double x, final double y) {
-        imatge.setLocation(x, y);
+        imatge.setLocation((int) (Math.random() * 50), (int) (Math.random() * 50));
     }
 
     //Mourà el camell en la posició corresponent
