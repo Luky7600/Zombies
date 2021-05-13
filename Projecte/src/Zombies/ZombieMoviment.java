@@ -66,7 +66,7 @@ public class ZombieMoviment {
 
         //Cridem els següents mètodes
         //pintaPista();
-        preparatsLlestos();
+        //preparatsLlestos();
         //Fem que la següent variable sigui igual al mètode
         camellMesRapid = aCorrer();
         //Crida el següent mètode
@@ -122,7 +122,7 @@ public class ZombieMoviment {
     }*/
 
     //metode per posar perparats a la llista de espera
-    private void preparatsLlestos() {
+    /*private void preparatsLlestos() {
         final File f = new File(ZombieMoviment.class.getProtectionDomain().getCodeSource().getLocation().getPath());
         playSong(f + "\\nokia.wav");
         GLabel text = new GLabel("Preparats ");
@@ -146,7 +146,7 @@ public class ZombieMoviment {
         pantalla.add(text3);
         pantalla.pause(TIMESTART-1000);
         pantalla.remove(text3);
-    }
+    }*/
 
     //Aquest metode es per tal cuan el camell arribi a la posicio desitjada surit el missatge de guanyador
     private void mostraResultat(final double camellMesRapid) {

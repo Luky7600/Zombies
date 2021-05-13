@@ -17,7 +17,7 @@ public class Main extends GraphicsProgram {
     public final void run() {
 
         //Fem una objecte per imprimir la pista amb els parametres de començament i la meta final
-        ZombieMoviment pistaDeCarreres = new ZombieMoviment(this, meta);
+        ZombieMoviment pistaDeCarreres = new ZombieMoviment(this, 5000);
 
         //fem un bucle per imprimir tots els camells amb una crida de la funcio nouCamell
         for (int i = 0; i < num; i++) {
