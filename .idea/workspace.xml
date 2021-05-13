@@ -89,8 +89,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-<<<<<<< HEAD
-=======
+
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -102,7 +101,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
->>>>>>> master
+
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Zombies" />
       <option name="VM_PARAMETERS" />
@@ -166,16 +165,15 @@
       <option name="presentableId" value="Default" />
       <updated>1620668873343</updated>
       <workItem from="1620668877510" duration="301000" />
-<<<<<<< Updated upstream
+
       <workItem from="1620831509857" duration="361000" />
-<<<<<<< HEAD
-=======
+
       <workItem from="1620669794809" duration="1754000" />
       <workItem from="1620737887177" duration="1065000" />
->>>>>>> Stashed changes
-=======
+
+
       <workItem from="1620913387912" duration="645000" />
->>>>>>> master
+
     </task>
     <servers />
   </component>
