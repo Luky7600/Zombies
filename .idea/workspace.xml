@@ -20,10 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a83da729-d954-4149-acc2-197a8afda20c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projecte/src/Zombies/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projecte/src/Zombies/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projecte/src/Zombies/ZombieImatge.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projecte/src/Zombies/ZombieImatge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projecte/src/Zombies/ZombieMoviment.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projecte/src/Zombies/ZombieMoviment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +164,7 @@
       <updated>1620668873343</updated>
       <workItem from="1620668877510" duration="301000" />
       <workItem from="1620831509857" duration="361000" />
-      <workItem from="1620913387912" duration="334000" />
+      <workItem from="1620913387912" duration="645000" />
     </task>
     <servers />
   </component>
