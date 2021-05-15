@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a83da729-d954-4149-acc2-197a8afda20c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projecte/src/Zombies/ZombieImatge.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projecte/src/Zombies/ZombieImatge.java" afterDir="false" />
-    </list>
+    <list default="true" id="a83da729-d954-4149-acc2-197a8afda20c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -170,7 +167,7 @@
       <workItem from="1620669794809" duration="1754000" />
       <workItem from="1620737887177" duration="1065000" />
       <workItem from="1620913387912" duration="645000" />
-      <workItem from="1621070679935" duration="420000" />
+      <workItem from="1621070679935" duration="1127000" />
     </task>
     <servers />
   </component>

@@ -21,7 +21,7 @@ public class Main extends GraphicsProgram {
 
         //fem un bucle per imprimir tots els camells amb una crida de la funcio nouCamell
         for (int i = 0; i < num; i++) {
-            pistaDeCarreres.afegirCamell(new ZombieImatge());
+            pistaDeCarreres.afegirEmoji(new ZombieImatge());
         }
 
         //Cridem el metode per poder iniciar la carrera
