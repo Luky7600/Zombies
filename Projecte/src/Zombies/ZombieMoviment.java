@@ -15,7 +15,7 @@ public class ZombieMoviment {
     //Assignem a la posicio de la pantalla con comença la carrera
     static final int POSICIOINICIAL = 10;
 
-    //Assignem a la següent variable la separació entre cada camell
+    //Assignem a la següent variable la separació entre cada emoji
     static final int SEPARACIO = 70;
 
     //Assignem el temps per començar la carrera
@@ -27,8 +27,8 @@ public class ZombieMoviment {
     //Assignem a pantalla nula que sera on s'ha de pintar
     private Main pantalla = null;
 
-    //Creem un array buit on s'afegiran els camells que participen
-    private ArrayList <ZombieImatge> camells = null;
+    //Creem un array buit on s'afegiran els emojis que participen
+    private ArrayList <ZombieImatge> emojis = null;
 
     //On es troba la linia d'arribada en la pantalla
     private double liniaFinal = 0;
@@ -40,17 +40,17 @@ public class ZombieMoviment {
     public ZombieMoviment(final Main c, final double mida) {
         //Pantalla serà el requadre del joc
         pantalla = c;
-        camells = new ArrayList<ZombieImatge>();
+        emojis = new ArrayList<ZombieImatge>();
         //Assignem el valor de liniaFinal a la següent variable
         liniaFinal = mida;
     }
 
-    //En el següent métode, afegirem un camell
-    public final void afegirCamell(final ZombieImatge manel) {
+    //En el següent métode, afegirem un emoji
+    public final void afegirEmoji(final ZombieImatge manel) {
         if (manel != null) {
-            manel.setPosicio(POSICIOINICIAL, (camells.size() * SEPARACIO)
+            manel.setPosicio(POSICIOINICIAL, (emojis.size() * SEPARACIO)
                     + POSICIOINICIAL);
-            camells.add(manel);
+            emojis.add(manel);
             pantalla.add(manel.getImatge());
         }
     }
@@ -58,19 +58,19 @@ public class ZombieMoviment {
     //Amb el següent metode, iniciem la carrera
     public final void iniciaCarrera() {
         //Creem la següent variable
-        double camellMesRapid = 0;
+        double emojiMesRapid = 0;
 
         //Assignem les dimensions del requadre
-        pantalla.setSize((int) liniaFinal + POSICIOINICIAL * 2, camells.size()
+        pantalla.setSize((int) liniaFinal + POSICIOINICIAL * 2, emojis.size()
                 * SEPARACIO);
 
         //Cridem els següents mètodes
         //pintaPista();
         //preparatsLlestos();
         //Fem que la següent variable sigui igual al mètode
-        camellMesRapid = aCorrer();
+        emojiMesRapid = aCorrer();
         //Crida el següent mètode
-        mostraResultat(camellMesRapid);
+        mostraResultat(emojiMesRapid);
     }
 
     private double aCorrer() {
@@ -82,7 +82,7 @@ public class ZombieMoviment {
             // Ronda
             pantalla.pause(TIMEPAUSE);
             int contador =1;
-            for (ZombieImatge candidat : camells) {
+            for (ZombieImatge candidat : emojis) {
                 contador++;
                 int velocitatMaxima = candidat.getMaximaVelocitat();
                 double moviment = (int) (Math.random() * velocitatMaxima);
@@ -97,15 +97,15 @@ public class ZombieMoviment {
                 }
             }
         }
-        //Retorna el camell que ha arribat primer
+        //Retorna el emoji que ha arribat primer
         return posicioPrimer;
     }
 
-    //Aquest metode es per tal de que la estrella segueixi sempre el camell que va guanyan en aquel moment
+    //Aquest metode es per tal de que la estrella segueixi sempre el emoji que va guanyan en aquel moment
     /*private void pintaPista() {
         int posicio = POSICIOINICIAL;
         // Pinta les línies horitzontals de les pistes
-        for (int i = 0; i <= camells.size(); i++) {
+        for (int i = 0; i <= emojis.size(); i++) {
             GLine linia = new GLine(0, posicio - POSICIOINICIAL, liniaFinal,
                     posicio - POSICIOINICIAL);
             linia.setColor(Color.GRAY);
@@ -115,7 +115,7 @@ public class ZombieMoviment {
 
         // Pinta la línia d'arribada
         GLine liniaArribada = new GLine(liniaFinal, 0, liniaFinal, SEPARACIO
-                * camells.size());
+                * emojis.size());
         liniaArribada.setColor(Color.RED);
         pantalla.add(liniaArribada);
 
@@ -148,14 +148,14 @@ public class ZombieMoviment {
         pantalla.remove(text3);
     }*/
 
-    //Aquest metode es per tal cuan el camell arribi a la posicio desitjada surit el missatge de guanyador
-    private void mostraResultat(final double camellMesRapid) {
+    //Aquest metode es per tal cuan el emoji arribi a la posicio desitjada surit el missatge de guanyador
+    private void mostraResultat(final double emojiMesRapid) {
         GLabel text = null;
         GLabel text2 = null;
-        for (ZombieImatge candidat : camells) {
-            if (candidat.getPosicio() == camellMesRapid) {
+        for (ZombieImatge candidat : emojis) {
+            if (candidat.getPosicio() == emojiMesRapid) {
                 // És un guanyador
-                text = new GLabel("CAMELL GUANYADOR!");
+                text = new GLabel("Emoji GUANYADOR!");
                 text2 = new GLabel("\uD83C\uDFC1");
                 text.setFont("Serif-bold-25");
                 text.setColor(Color.BLUE);
