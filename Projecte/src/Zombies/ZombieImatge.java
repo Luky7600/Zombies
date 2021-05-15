@@ -2,6 +2,8 @@ package Zombies;
 
 import acm.graphics.GImage;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 public class ZombieImatge {
     //Crearem una variable per comptar els emojis
     private static int lastID = 1;
@@ -50,11 +52,13 @@ public class ZombieImatge {
         return imatge.getX() + imatge.getWidth();
     }
 
-    //Definirà la posiciódel emoji, posició "X" i posició "Y"
+    //Definirà la posició del emoji, posició "X" i posició "Y" de forma recursiva
     public final void setPosicio(final double x, final double y) {
-        imatge.setLocation((int) (Math.random() * 50), (int) (Math.random() * 50));
+        int randomNum = ThreadLocalRandom.current().nextInt(1, 500 + 1);
+        int randomNum2 = ThreadLocalRandom.current().nextInt(1, 500 + 1);
+        imatge.setLocation(randomNum, randomNum2);
         if (id == 6){
-            imatge.setLocation(500,500);
+            imatge.setLocation(250,250);
         }
     }
 

@@ -41,7 +41,6 @@ public class ZombieMoviment {
         //Pantalla serà el requadre del joc
         pantalla = c;
         emojis = new ArrayList<ZombieImatge>();
-        //Assignem el valor de liniaFinal a la següent variable
         liniaFinal = mida;
     }
 
