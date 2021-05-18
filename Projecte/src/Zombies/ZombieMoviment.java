@@ -65,11 +65,10 @@ public class ZombieMoviment {
         //pintaPista();
         //preparatsLlestos();
         //Fem que la següent variable sigui igual al mètode
-        emojiMesRapid = aCorrer();
+        aCorrer();
         //Crida el següent mètode
-        mostraResultat(emojiMesRapid);
+        //mostraResultat(emojiMesRapid);
     }
-    private static final double BALL_RADIUS = 10;
     private double aCorrer() {
         //Creem un boleà que sigui fals
         boolean finalCarrera = false;
@@ -155,7 +154,7 @@ public class ZombieMoviment {
     }*/
 
     //Aquest metode es per tal cuan el emoji arribi a la posicio desitjada surit el missatge de guanyador
-    private void mostraResultat(final double emojiMesRapid) {
+    /*private void mostraResultat(final double emojiMesRapid) {
         GLabel text = null;
         GLabel text2 = null;
         for (ZombieImatge candidat : emojis) {
@@ -187,7 +186,7 @@ public class ZombieMoviment {
 
             }
         }
-    }
+    }*/
     public static void playSong (String filepath){
         try {
             File file = new File(filepath);
