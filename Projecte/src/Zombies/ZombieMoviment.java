@@ -71,7 +71,7 @@ public class ZombieMoviment {
         //Crida el següent mètode
         mostraResultat(emojiMesRapid);
     }
-
+    private static final double BALL_RADIUS = 10;
     private double aCorrer() {
         //Creem un boleà que sigui fals
         boolean finalCarrera = false;
@@ -82,7 +82,7 @@ public class ZombieMoviment {
             pantalla.pause(TIMEPAUSE);
             int contador =1;
             for (ZombieImatge candidat : emojis) {
-                contador++;
+                /*contador++;
                 int velocitatMaxima = candidat.getMaximaVelocitat();
                 double moviment = (int) (Math.random() * velocitatMaxima);
                 double moviment2 = (int) (Math.random() * velocitatMaxima);
@@ -93,7 +93,14 @@ public class ZombieMoviment {
 
                 if (candidat.getPosicio() > posicioPrimer) {
                     posicioPrimer = candidat.getPosicio();
-                }
+                }*/
+                int dx = 2;
+                int dy = 1;
+                double bx = candidat.getImatge().getX();
+                double by = candidat.getImatge().getY();
+                if (bx < BALL_RADIUS || bx > candidat.getImatge().getWidth() - BALL_RADIUS) dx = -dx;
+                if (by < BALL_RADIUS || by > candidat.getPosicio() - BALL_RADIUS) dy = -dy;
+                candidat.mou(dx, dy);
             }
         }
         //Retorna el emoji que ha arribat primer
@@ -203,3 +210,15 @@ public class ZombieMoviment {
         new Main().start(args);
     }
 }
+/*contador++;
+                int velocitatMaxima = candidat.getMaximaVelocitat();
+                double moviment = (int) (Math.random() * velocitatMaxima);
+                double moviment2 = (int) (Math.random() * velocitatMaxima);
+                candidat.mou(moviment, moviment2);
+                if (candidat.getPosicio() >= liniaFinal) {
+                    finalCarrera = true;
+                }
+
+                if (candidat.getPosicio() > posicioPrimer) {
+                    posicioPrimer = candidat.getPosicio();
+                }*/
