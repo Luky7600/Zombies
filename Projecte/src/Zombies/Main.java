@@ -17,7 +17,7 @@ public class Main extends GraphicsProgram {
     public final void run() {
 
         //Fem una objecte per imprimir la pista amb els parametres de començament i la meta final
-        ZombieMoviment pistaDeCarreres = new ZombieMoviment(this,900);
+        ZombieMoviment pistaDeCarreres = new ZombieMoviment(this,3000);
 
         //fem un bucle per imprimir tots els emojis amb una crida de la funcio el numero de vegades assignat al parametre num
         for (int i = 0; i < num; i++) {

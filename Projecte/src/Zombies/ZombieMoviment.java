@@ -60,9 +60,7 @@ public class ZombieMoviment {
         double emojiMesRapid = 0;
 
         //Assignem les dimensions del requadre
-        pantalla.setSize((int) liniaFinal + POSICIOINICIAL * 2, emojis.size()
-                * SEPARACIO);
-
+        pantalla.setSize(20000,15000);
         //Cridem els següents mètodes
         //pintaPista();
         //preparatsLlestos();
@@ -80,27 +78,29 @@ public class ZombieMoviment {
         while (!finalCarrera) {
             // Ronda
             pantalla.pause(TIMEPAUSE);
-            int contador =1;
             for (ZombieImatge candidat : emojis) {
-                /*contador++;
-                int velocitatMaxima = candidat.getMaximaVelocitat();
-                double moviment = (int) (Math.random() * velocitatMaxima);
-                double moviment2 = (int) (Math.random() * velocitatMaxima);
-                candidat.mou(moviment, moviment2);
-                if (candidat.getPosicio() >= liniaFinal) {
-                    finalCarrera = true;
+                double dx = 2;
+                double dy = 1;
+                /*Storage in the variables "positionX" and "positionY", the position X and Y to the emoji to param*/
+                double positionX = candidat.getImatge().getX();
+                double positionY = candidat.getImatge().getY();
+
+                /*Check what "locX" be less that 0 or "locX" be greater that width to the window less 50
+                 * if is complies, will do the following*/
+                if (positionX < 0 || positionX > candidat.getImatge().getWidth() - 50) {
+                    dx = -dx;
+                }
+                /*Check what "locY" be less that 0 or "locY" be greater that height to the window less 50
+                 * if is complies, will do the following*/
+                if (positionY < 0 || positionY > candidat.getImatge().getHeight() - 50) {
+                    dy = -dy;
                 }
 
-                if (candidat.getPosicio() > posicioPrimer) {
-                    posicioPrimer = candidat.getPosicio();
-                }*/
-                int dx = 2;
-                int dy = 1;
-                double bx = candidat.getImatge().getX();
-                double by = candidat.getImatge().getY();
-                if (bx < BALL_RADIUS || bx > candidat.getImatge().getWidth() - BALL_RADIUS) dx = -dx;
-                if (by < BALL_RADIUS || by > candidat.getPosicio() - BALL_RADIUS) dy = -dy;
-                candidat.mou(dx, dy);
+                /*Move the emoji*/
+                candidat.getImatge().move(dx,dy);
+
+                /*establishes the pause time, in the value of the variable "3"*/
+                pantalla.pause(1);
             }
         }
         //Retorna el emoji que ha arribat primer
